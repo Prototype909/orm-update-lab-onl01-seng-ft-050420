@@ -57,7 +57,7 @@ class Student
     FROM students
     WHERE name = ?
     SQL
-    return = DB[:conn].execute(sql, name) do |row|
+    return DB[:conn].execute(sql, name) do |row|
       student.new(name)
     end
   end
